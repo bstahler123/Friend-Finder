@@ -1,6 +1,6 @@
 var friends = require("../finder_data/friends.js");
 
-var bestFriends = require("../finder_data/best_matches.js");
+var best_matches = require("../finder_data/best_matches.js");
 
 module.exports = function(app) {
 
@@ -12,7 +12,7 @@ module.exports = function(app) {
 
   app.get("/api/bestFriends", function(req, res) {
 
-    res.json(bestFriends);
+    res.json(best_matches);
 
   })
 

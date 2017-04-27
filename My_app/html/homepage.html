@@ -14,7 +14,7 @@
   <div class="container">
     <div class="jumbotron">
       <h1>Friend Finder</h1>
-      <h3>The Greatest Friend Finder In The Universe!</h3>
+      <h3>Friend Finder</h3>
       <hr>
       <a href="/survey"><button type="button" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-plus"></span> Fill Out New Friend Survey!</button></a>
       <a href="/friends"><button type="button" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-th-list"></span> All Friends</button></a>
@@ -45,8 +45,6 @@
     $("#search-btn").on("click", function() {
 
       var searchedFriends = $("#friendSearch").val().trim();
-
-      searchedFriends = searchedFriends.replace(/\s+/g, "").toLowerCase();
 
       console.log(searchedFriends);
 
