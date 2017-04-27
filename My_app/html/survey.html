@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Friend Finder Survey</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Friend Survey</h1>
+            <h3>Friend Finder</h3>
+            <hr>
+            <a href="/">
+                <button type="button" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-plus"></span> Home</button>
+            </a>
+            <a href="/friends">
+                <button type="button" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-th-list"></span> All Friends</button>
+            </a>
+            <a href="/api">
+                <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-th-list"></span> Friends API </button>
+            </a>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Friend Survey</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form">
+                            <div class="container">
+                                <div class="form-group">
+                                    <label for="name">Name: </label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="age">Age: </label>
+                                    <input type="text" class="form-control" id="age" placeholder="Enter Age">
+                                </div>
+                            </div>
+                            <div class="container question" id="Q1" data-toggle="buttons">
+                                <h3>Do you like sports?</h3>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="q1" value="1">Yes
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="q1" value="2">No
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="q1" value="3">Somewhat
+                                </label>
+                            </div>
+                            <br>
+                            <div class="container question" id="Q2" data-toggle="buttons">
+                                <h3>Cat or dog?</h3>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="q2" value="1">Cat
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="q2" value="2">Dog
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="q2" value="3">Neither
+                                </label>
+                            </div>
+                            <br>
+                            <div class="container" id="Q3" data-toggle="buttons">
+                                <h3>Do you smoke?</h3>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="q3" value="1">Yes
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="q3" value="2">No
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="q3" value="3">Sometimes
+                                </label>
+                            </div>
+                            <br>
+                            <div class="container" id="Q4" data-toggle="buttons">
+                                <h3>Do you drink?</h3>
+                                <form>
+                                    <label class="btn btn-default">
+                                        <input type="radio" name="q4" value="1">Yes
+                                    </label>
+                                    <label class="btn btn-default">
+                                        <input type="radio" name="q4" value="2">No
+                                    </label>
+                                    <label class="btn btn-default">
+                                        <input type="radio" name="q4" value="3">Sometimes
+                                    </label>
+                                </form>
+                            </div>
+                            <br>
+                            <div class="container" id="Q5" data-toggle="buttons">
+                                <h3>Do you have kids?</h3>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="q5" value="1">Yes
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="q5" value="2">No
+                                </label>
+                            </div>
+                            <br>
+                            <div class="container" id="Q6" data-toggle="buttons">
+                                <h3>Do you want kids?</h3>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="q6" value="1">Yes
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="q6" value="2">No
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="q6" value="3">Maybe
+                                </label>
+                            </div>
+                            <br>
+                            <div class="container" id="Q7" data-toggle="buttons">
+                                <h3>What is your fovorite movie genre?</h3>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="q7" value="1">Drama
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="q7" value="2">Horror
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="q7" value="3">Action
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="q7" value="4">Comedy
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="q7" value="5">Chickflicks
+                                </label>
+                            </div>
+                            <br>
+                            <div class="container" id="Q8" data-toggle="buttons">
+                                <h3>What is your favorite food?</h3>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="q8" value="1">Pizza
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="q8" value="2">Steak
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="q8" value="3">Chicken
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="q8" value="4">Salmon
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="q8" value="5">Roman
+                                </label>
+                            </div>
+                            <br>
+                            <div class="container" id="Q9" data-toggle="buttons">
+                                <h3>Do you have a degree?</h3>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="q9" value="1">Yes
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="q9" value="2">No
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="q9" value="3">Persuing
+                                </label>
+                            </div>
+                            <br>
+                            <div class="container" id="Q10" data-toggle="buttons">
+                                <h3>Would you go out on a weekday?</h3>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="q10" value="1">Yes
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="q10" value="2">No
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="q10" value="3">Sometimes
+                                </label>
+                            </div>
+                        </form>
+                        <br>
+                        <div class="text-right">
+                            <button type="submit" class="btn btn-primary btn-md" id="add-btn"><span class="glyphicon glyphicon-fire"></span> Add to Friend Finder</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+            $("#add-btn").on("click", function(event) {
+                event.preventDefault();
+
+                var answers = $('input:checked');
+                var score = 0;
+
+                $.each(answers, function(i, el) {
+                    console.log(i, el)
+                  
+                });
+                console.log(answers);
+
+
+
+
+                // app.post("/api/new", function(req, res) {
+
+                //     var newFriend = {
+               
+                //     };
+
+
+                //     res.json(newFriend);
+                // });
+
+                $("#name").val("");
+                $("#age").val("");
+
+
+            });
+            </script>
+</body>
+
+</html>
